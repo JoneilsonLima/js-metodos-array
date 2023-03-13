@@ -7,7 +7,7 @@ botoes.forEach(btn => {
 function filtrarLivros() {
     const elementoBtn = document.getElementById(this.id);
     const categoria = elementoBtn.value;
-    let livrosFiltrados = livros.filter(livro => {
+    let livrosFiltrados = categoria == 'disponiveis' ? livros.filter(livro => livro.quantidade > 0) : livros.filter(livro => {
         return livro.categoria == categoria;
     });
     exibirLivrosNaTela(livrosFiltrados);
