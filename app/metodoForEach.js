@@ -1,6 +1,8 @@
 const elementoParaInserirLivros = document.getElementById('livros');
+const elementoComValortotalDeLivrosDisponiveis = document.getElementById('valor_total_livros_disponiveis');
 
 function exibirLivrosNaTela(listaDeLivros) {
+  elementoComValortotalDeLivrosDisponiveis.innerHTML =  '';
     elementoParaInserirLivros.innerHTML = '';
     listaDeLivros.forEach(livro => {
       let disponibilidade = livro.quantidade > 0 ? 'livro__imagens' : 'indisponivel';
